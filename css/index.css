@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #464646;
+  border: none;
+}
+html {
+  width: 100%;
+}
+body > iframe {
+  display: none;
+}
+body {
+  font-size: 14px;
+  width: 100%;
+  font-family: 'PingFangSC-Regular';
+  letter-spacing: 0;
+  color: #464646;
+  min-width: 1200px;
+}
+strong {
+  font-weight: normal;
+}
+.center {
+  width: 1200px;
+  margin: 0 auto;
+  height: 100%;
+}
+.main {
+  background: url(../img/lb_index.jpg) no-repeat top center;
+  width: 100%;
+  min-width: 1200px;
+  height: 2219px;
+}
+.main_bottom {
+  background: #32373b;
+  height: 381px;
+  color: #a1aeb9;
+}
+.main_bottom .about {
+  padding: 60px 0 0;
+  height: 215px;
+}
+.main_bottom .about dl {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  width: 230px;
+  height: 100%;
+  overflow: hidden;
+  margin-right: 90px;
+}
+.main_bottom .about dl dt {
+  line-height: 1;
+  height: 33px;
+  width: 100%;
+  border-bottom: 1px solid #657079;
+  font-size: 18px;
+}
+.main_bottom .about dl dd {
+  padding-top: 19px;
+}
+.main_bottom .about dl dd a {
+  display: inline-block;
+  color: #A1AEB9;
+  margin-right: 2em;
+}
+.main_bottom .about .contact_us {
+  width: 260px;
+}
+.main_bottom .about div {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  width: 170px;
+  height: 100%;
+  overflow: hidden;
+  text-align: center;
+}
+.main_bottom .about div img {
+  width: 148px;
+}
+.main_bottom .about div span {
+  font-size: 18px;
+  color: #fff;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  margin-top: 11px;
+}

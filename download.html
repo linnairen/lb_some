@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>下载萝泊停车B端</title>
+		<link rel="shortcut icon" href="logo.ico" /> 
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script src="js/rem.min.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+				letter-spacing: 0;
+				line-height: 1;
+				font-size: 0.36rem;
+				font-family: 'PingFangSC-Regular';
+			}
+			body{
+				max-width: 7.5rem;
+				margin: 0 auto;
+			}
+			.main{
+				text-align: center;
+				padding-top: 0.72rem;
+				height: 100%;
+				box-sizing: border-box;
+			}
+			.top img{
+				width: 6.68rem;
+			}
+			.btn_box{
+				padding: 0.43rem 0.72rem 0;
+				height: 1.98rem;
+			}
+			.btns{
+				height: 100%;
+				padding: 0.02rem 0;
+			}
+			.btns .btn{
+				width: 4.3rem;
+				height: 0.9rem;
+				line-height: 0.9rem;
+				border-radius: 0.9rem;
+				color: #fff;
+				background: #FF891B;
+				text-align: center;
+				margin: 0 auto;
+				text-align: center;
+			}
+			.btns .btn:first-child{
+				margin-bottom: 0.4rem;
+			}
+			.btn img{
+				vertical-align: middle;
+				height: 0.41rem;
+				margin-right: 0.15rem;
+				margin-top: -0.1rem;
+			}
+			.btn:first-child{
+				background: #c0c0c0;
+			}
+			.qr{
+				float: right;
+				height: 100%;
+			}
+			.qr img{
+				height: 100%;
+			}
+			.shadow{
+				background: rgba(0,0,0,0.5);
+				color: #fff;
+				font-size: .3rem;
+				position: fixed;
+				top: 0;
+				left: 0;
+				bottom: 0;
+				right: 0;
+			}
+			.shadow span{
+				padding: 0.37rem 0 0 0.41rem;
+				display: inline-block;
+				width: 5.7rem;
+			}
+			.shadow img{
+				position: absolute;
+				right: 0.31rem;
+				top: 0.13rem;
+				width: 1.11rem;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="main">
+			<div class="top"><img src="img/image.png"/></div>
+			<div class="btn_box">
+				<div class="btns">
+					<div class="btn" disabled="disabled" onclick="clickFun('苹果地址')"><img src="img/ios.png" />iPhone下载</div>
+					<div class="btn" onclick="clickFun('安卓地址')"><img src="img/android.png" />Android下载</div>
+				</div>
+			</div>
+		</div>
+		<div class="shadow" style="display: none;">
+			<span>点击这里，选择在浏览器中打开，即可安装</span><img src="img/line.png" alt="" />
+		</div>
+		<script type="text/javascript" id="sc">
+			function inWeixin () {
+				return navigator.userAgent.toLowerCase().indexOf('micromessenger') != -1
+			}
+			var shadow = document.querySelector('.shadow')
+			function bindFun (bool) {
+				shadow.style.display = bool ? 'block' : 'none'
+			}
+			shadow.onclick = function(){
+				bindFun(false)
+			}
+			function clickFun (url) {
+				if(inWeixin()){
+					bindFun(true)
+				}
+				else{
+					location.href = url
+				}
+			}
+		</script>
+	</body>
+</html>
